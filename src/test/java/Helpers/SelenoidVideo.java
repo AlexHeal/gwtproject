@@ -11,7 +11,6 @@ public class SelenoidVideo {
 
     public static String selenoidUrl = "http://0.0.0.0:4444";
 
-    //@Step
     public static void attachAllureVideo(String sessionId) {
         try {
             URL videoUrl = new URL(selenoidUrl + "/video/" + sessionId + ".mp4");
@@ -47,7 +46,7 @@ public class SelenoidVideo {
                 }
             } catch (Exception e) {
                 System.out.println("getSelenoidVideo: " + e.getMessage());
-                //e.printStackTrace();
+                e.printStackTrace();
             }
         }
 

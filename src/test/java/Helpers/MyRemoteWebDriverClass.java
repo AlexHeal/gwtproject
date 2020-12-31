@@ -20,11 +20,8 @@ public class MyRemoteWebDriverClass implements WebDriverProvider {
         capabilities.setBrowserName("chrome");
         capabilities.setCapability(ChromeOptions.CAPABILITY, MyChromeBrowserClass.getChromeOptions());
         capabilities.setCapability("screenResolution", "1920x1080x24");
-        //capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("timeZone", "Europe/Moscow");
 
-        //String[] app = {"qabattle:qabattle"};
-        //capabilities.setCapability("applicationContainers", app);
 
         Log.debug("video.enabled: " + System.getProperty("video.enabled"));
         if ("true".equals(System.getProperty("video.enabled"))) {
@@ -47,7 +44,7 @@ public class MyRemoteWebDriverClass implements WebDriverProvider {
         try {
             hostURL = new URL(System.getProperty("selenoid.url", "http://0.0.0.0:4444/wd/hub"));
         } catch (MalformedURLException e) {
-            //e.printStackTrace();
+            e.printStackTrace();
         }
         return hostURL;
     }

@@ -10,7 +10,7 @@
 
     <properties>
         <!--config-->
-        <video.enabled>true</video.enabled>
+        <video.enabled>false</video.enabled>
         <selenoid.url>http://0.0.0.0:4444/wd/hub</selenoid.url>
         <base.url>http://samples.gwtproject.org/</base.url>
 

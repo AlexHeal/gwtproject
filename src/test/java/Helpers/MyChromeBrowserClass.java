@@ -35,22 +35,14 @@ public class MyChromeBrowserClass implements WebDriverProvider {
     public static ChromeOptions getChromeOptions() {
         ChromeOptions chromeOptions = new ChromeOptions();
 
-        //chromeOptions.addArguments("--headless");
-
         chromeOptions.addArguments("disable-infobars");
         chromeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         chromeOptions.setExperimentalOption("useAutomationExtension", false);
 
-        //chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--disable-gpu");
         chromeOptions.addArguments("--disable-extensions");
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-dev-shm-usage");
-        //chromeOptions.addArguments("disable-popup-blocking", "true");
-
-        //chromeOptions.addArguments("--enable-logging=stderr --v=1");
-        //if (BaseTestClass.isUnix())
-        //    chromeOptions.setBinary("/usr/bin/google-chrome");
 
         Map<String, Object> prefs = new HashMap<String, Object>();
         prefs.put("credentials_enable_service", false);
